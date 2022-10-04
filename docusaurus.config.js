@@ -38,6 +38,7 @@ const config = {
                     // Please change this to your repo.
                     // Remove this to remove the "edit this page" links.
                     editUrl: "https://github.com/modelstar-labs/docs/",
+                    showLastUpdateTime: true,
                 },
                 // blog: {
                 //     showReadingTime: true,
@@ -69,6 +70,7 @@ const config = {
                     // width: 32,
                     // height: 32,
                 },
+                hideOnScroll: true,
                 items: [
                     {
                         to: "/docs/quickstart",

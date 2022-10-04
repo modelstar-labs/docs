@@ -138,3 +138,27 @@
         padding-left: 2.5rem;
     }
 }
+
+#__docusaurus
+    > div.main-wrapper.mainWrapper_node_modules-\@docusaurus-theme-classic-lib-theme-Layout-styles-module.docsWrapper_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-styles-module
+    > div
+    > aside
+    > div
+    > nav {
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
+}
+
+#__docusaurus
+    > div.main-wrapper.mainWrapper_node_modules-\@docusaurus-theme-classic-lib-theme-Layout-styles-module.docsWrapper_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-styles-module
+    > div
+    > aside
+    > div
+    > nav
+    > ul
+    > li {
+    margin-top: 0.5rem;
+}
+
+article > div.theme-doc-markdown.markdown > p > img {
+    border-radius: 5px;
+}

@@ -38,7 +38,7 @@ export default function Home() {
         >
             <HomepageHeader />
             <main>
-                <div className="container">Some content goes here.</div>
+                <div className="container">{" "}</div>
             </main>
         </Layout>
     );
