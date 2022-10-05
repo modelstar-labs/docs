@@ -1,39 +1,43 @@
-# Getting started
-
-In just a few minutes you can deploy Python functions to your Data Warehouses/Lakehouses and run them as SQL functions. The transformations are all done withing your data platform itself. Let's wait no more, and get started.
-
 # Quickstart
 
-Quickstart
-It’s easy to get started with Greppo.
+In just a few minutes you can deploy a Python function to your Data Warehouses/Lakehouses and run them as SQL functions.
 
-Install Greppo¶
-First install the Greppo python package using your python installation,
+-   You don't have to write any special syntax specific to your data platform.
+-   You don't have to setup any environment or compute server instance. All the compute and Python execution is done within the data platform.
+-   You don't have to move data away from your data platform.
 
-pip install greppo
-Setup the project
-Create a new dir for your Greppo project, and create a new script,
+## Installation
 
-mkdir my-greppo-app
-cd my-greppo-app
-touch app.py
+To get started with Moelstar, install the Modelstar Python package into your local Python environment.
 
-Create a new file app.py that will setup the user script,
+```bash
+pip install modelstar
+```
 
-touch app.py
+:::tip
+Install `modelstar` within a Python virtual environment.
 
-Populate script with a simple app to get started with,
+Hint: `pyenv`, `virtualenv`, `poetry`
+:::
 
-from greppo import app
-import numpy as np
+:::caution
+Modelstar currently supports only Python 3.8.
+:::
 
-x = app.number(name="x", value=3)
+## Create a project
 
-print('Numbers list: ', np.ones(10) \* x)
+Modelstar provides a project template out-of-the-box with sample UDFs that you can deploy to your data platform.
 
-This script creates a single input x that the user can interact with and the script generates a list of the current number value with a list size of 10,
+Initialize a project from template using:
 
-Run app
-Run the app and you’re on your way building a geospatial app in seconds!
+```shell
+modelstar init my_project
+```
 
-greppo serve app.py
+This will create a project folder named _my_project_ at the location you are running this command.
+
+:::tip
+`modelstar init <project_name>` is the base command, where <project_name> can be replaced with the name of your choice. 
+
+`modelstar init .` can be used to initialize the project inside the current folder location. Running this command will create all the necessary files within the current folder location and name the project using the folder's name. 
+:::

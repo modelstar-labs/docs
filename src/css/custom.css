@@ -27,6 +27,9 @@
     --ifm-navbar-padding-vertical: 0;
     --ifm-navbar-height: 3.25rem;
 
+    --ifm-alert-padding-horizontal: 1rem;
+    --ifm-alert-padding-vertical: 0.5rem;
+
     /* --ifm-font-family-base: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont,
       'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji',
       'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -161,4 +164,35 @@
 
 article > div.theme-doc-markdown.markdown > p > img {
     border-radius: 5px;
+}
+
+#__docusaurus
+    > div.main-wrapper.mainWrapper_node_modules-\@docusaurus-theme-classic-lib-theme-Layout-styles-module.docsWrapper_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-styles-module
+    > div
+    > main
+    > div
+    > div
+    > div
+    > div
+    > article
+    > div.theme-doc-markdown.markdown
+    > div
+    > div.admonitionHeading_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module {
+    font: var(--ifm-heading-font-weight) 0.7rem /
+        var(--ifm-heading-line-height) var(--ifm-heading-font-family);
+}
+
+#__docusaurus
+    > div.main-wrapper.mainWrapper_node_modules-\@docusaurus-theme-classic-lib-theme-Layout-styles-module.docsWrapper_node_modules-\@docusaurus-theme-classic-lib-theme-DocPage-Layout-styles-module
+    > div
+    > main
+    > div
+    > div
+    > div.col.docItemCol_node_modules-\@docusaurus-theme-classic-lib-theme-DocItem-Layout-styles-module
+    > div
+    > article
+    > div.theme-doc-markdown.markdown
+    > div
+    > div.admonitionContent_node_modules-\@docusaurus-theme-classic-lib-theme-Admonition-styles-module {
+    font-size: 0.9rem;
 }
