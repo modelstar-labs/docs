@@ -14,19 +14,25 @@ const sidebars = {
             label: "Quickstart",
         },
         {
-            type: "doc",
-            id: "tutorial/index",
-            label: "Tutorial",
-        },
-        {
             type: "category",
-            label: "Building a project",
+            label: "Tutorials",
             link: {
                 type: "generated-index",
             },
-            collapsed: true,
-            items: ["project-build/create-a-project"],
+            collapsed: false,
+            items: ["tutorial/what-are-python-udfs-and-stored-procedures",
+                    "tutorial/create-a-udf-project"
+                    ],
         },
+        // {
+        //     type: "category",
+        //     label: "Building a project",
+        //     link: {
+        //         type: "generated-index",
+        //     },
+        //     collapsed: true,
+        //     items: ["project-build/create-a-project"],
+        // },
         {
             type: "category",
             label: "API",

@@ -41,3 +41,6 @@ This will create a project folder named _my_project_ at the location you are run
 
 `modelstar init .` can be used to initialize the project inside the current folder location. Running this command will create all the necessary files within the current folder location and name the project using the folder's name. 
 :::
+
+
+<!-- TODO: Need an end-to-end example to push a simple UDF. -->
