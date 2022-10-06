@@ -19,7 +19,7 @@ function HomepageHeader() {
                 <div className={styles.heroCTA}>
                     <Link
                         className="button button--secondary button--md"
-                        to="/docs/getting-started"
+                        to="/docs/quickstart"
                     >
                         Get Started&nbsp;&nbsp;→
                     </Link>

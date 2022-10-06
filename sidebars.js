@@ -10,22 +10,22 @@ const sidebars = {
         },
         {
             type: "doc",
+            id: "bilingualism/index",
+            label: "Bilingual Data Transformation",
+        },
+        {
+            type: "doc",
             id: "quickstart/index",
             label: "Quickstart",
         },
         {
-            type: "doc",
-            id: "tutorial/index",
-            label: "Tutorial",
-        },
-        {
             type: "category",
-            label: "Building a project",
+            label: "Tutorials",
             link: {
                 type: "generated-index",
             },
-            collapsed: true,
-            items: ["project-build/create-a-project"],
+            collapsed: false,
+            items: ["tutorials/create-a-udf-project"],
         },
         {
             type: "category",
