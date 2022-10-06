@@ -40,7 +40,7 @@ Python's ecosystem can complement SQL in the following ways:
 -   **Matured development tool chains** Python is used for both scripting and serious software projects. Its tool chains (development, testing, logging, CI/CD, etc.) have evolved to support web-scale applications, so teams can collaborate well to build complex systems.
 -   **Data related packages** SQL and Python are the top 2 languages used for data transformation. Data practitioners who leverage both languages can easily build elegant solutions.
 
-![Python vs SQL](./img/python-vs-sql.png)
+![Python vs SQL](./python-vs-sql.png)
 
 ## Some issues that could happen during Python UDF deployment
 

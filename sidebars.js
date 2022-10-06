@@ -10,6 +10,11 @@ const sidebars = {
         },
         {
             type: "doc",
+            id: "bilingualism/index",
+            label: "Bilingual Data Transformation",
+        },
+        {
+            type: "doc",
             id: "quickstart/index",
             label: "Quickstart",
         },
@@ -20,19 +25,8 @@ const sidebars = {
                 type: "generated-index",
             },
             collapsed: false,
-            items: ["tutorial/what-are-python-udfs-and-stored-procedures",
-                    "tutorial/create-a-udf-project"
-                    ],
+            items: ["tutorials/create-a-udf-project"],
         },
-        // {
-        //     type: "category",
-        //     label: "Building a project",
-        //     link: {
-        //         type: "generated-index",
-        //     },
-        //     collapsed: true,
-        //     items: ["project-build/create-a-project"],
-        // },
         {
             type: "category",
             label: "API",
