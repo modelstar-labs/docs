@@ -1,4 +1,10 @@
-# What are Python UDFs and Stored Procedures
+---
+draft: true
+---
+
+# Python + SQL
+
+## What are Python UDFs and Stored Procedures
 
 UDFs and Stored Procedures are used to modularize SQL statement.
 
@@ -29,12 +35,14 @@ Modelstar lets you define SProc as a Python function. This function can take in 
 ## UDFs and SProcs bring Python's superpower to SQL
 
 ### What problems Python UDFs and SProc solve:
+
 -   **Hard-to-read SQL statements**
     No one likes lengthy SQL statements. It’s hard to read, modify and reuse, causing technical debts.
 -   **Limited SQL capability**
     SQL is good at aggregation and filter based data manipulation, but has limited usages in something a bit more complex, such as predictive analytics, machine learning, etc..
 
 ### Python's strong ecosystem
+
 Python's ecosystem can complement SQL in the following ways:
 
 -   **Matured development tool chains** Python is used for both scripting and serious software projects. Its tool chains (development, testing, logging, CI/CD, etc.) have evolved to support web-scale applications, so teams can collaborate well to build complex systems.
@@ -45,12 +53,15 @@ Python's ecosystem can complement SQL in the following ways:
 ## Some issues that could happen during Python UDF deployment
 
 #### Test coverage issue
+
 Sometimes a function works perfectly in local dev environment, but breaks in warehouses.
 
 #### Deployment issue
+
 Snowpark's `Session.udf.register()` relies on manual efforts to map out dependencies and handle files. Once projects become complicated, such manual efforts should be replaced by modern CI/CD pipelines.
 
 #### Observability issue
+
 There're no observability on how well our UDFs run in a warehouse. In production, developers want to know telemetry, availability, logs, errors, status, and usage.
 
 :::tip

@@ -73,23 +73,23 @@ const config = {
                 hideOnScroll: true,
                 items: [
                     {
+                        type: "doc",
+                        docId: "introduction/index",
+                        position: "left",
+                        label: "Docs",
+                    },
+                    {
                         to: "/docs/quickstart",
                         label: "Quickstart",
                         position: "left",
                         // activeBaseRegex: `/community/`,
                     },
-                    {
-                        to: "/docs/api",
-                        label: "API",
-                        position: "left",
-                        // activeBaseRegex: `/community/`,
-                    },
-                    {
-                        type: "doc",
-                        docId: "introduction/index",
-                        position: "right",
-                        label: "Docs",
-                    },
+                    // {
+                    //     to: "/docs/api",
+                    //     label: "API",
+                    //     position: "left",
+                    //     // activeBaseRegex: `/community/`,
+                    // },
                     {
                         href: "https://github.com/modelstar-labs/modelstar",
                         // label: "GitHub",

@@ -10,11 +10,6 @@ const sidebars = {
         },
         {
             type: "doc",
-            id: "bilingualism/index",
-            label: "Bilingual Data Transformation",
-        },
-        {
-            type: "doc",
             id: "quickstart/index",
             label: "Quickstart",
         },
@@ -26,6 +21,12 @@ const sidebars = {
             },
             collapsed: false,
             items: ["tutorials/create-a-udf-project"],
+        },
+        // Currently in Draft, Will be hidden in production .
+        {
+            type: "doc",
+            id: "bilingualism/index",
+            label: "Python + SQL",
         },
         {
             type: "category",
