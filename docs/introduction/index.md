@@ -8,17 +8,19 @@ We will add support to other data platforms such as Databricks and BigQuery afte
 
 :::
 
-## How Modelstar works?
+## How does Modelstar work?
 
-![How Modelstar works](./how_modelstar_works.png)
+<h3>Life cycle management of Snowflake Python UDFs/Stored-Procedures </h3>
+
+![How does Modelstar work?](./how_modelstar_works.png)
 Modelstar streamlines Snowflake UDFs and Store Procedures deployment with:
-- Automagically dependency mapping
-  - libraries
-  - local packages
-  - local files
-- Support of most Python testing frameworks
-- Integration with Git for version control
 
+-   Automagically dependency mapping
+    -   libraries
+    -   local packages
+    -   local files
+-   Support of most Python testing frameworks
+-   Integration with Git for version control
 
 :::info
 
