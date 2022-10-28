@@ -111,7 +111,7 @@ This will give the following output, which shows you the available databases for
 
 
 <!-- Need more revision -->
-## Step $4: Register a Modelstar ML Algorithm
+## Step #4: Register a Modelstar ML Algorithm
 
 Using the `modelstar` cli you can register a function as a UDF using the command `modelstar register function <file_location>:<function_handler>` along with the location of the function and the function handler. 
 

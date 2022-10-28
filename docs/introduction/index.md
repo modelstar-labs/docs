@@ -11,7 +11,7 @@ ModelStar enables data teams to get more done with less SQL. With a few lines of
 
 :::info
 
-We will add support to other data platforms such as Databricks, Redshift, before v0.8.
+We will add support to other data platforms, such as Databricks, Redshift, soon
 
 :::
 
