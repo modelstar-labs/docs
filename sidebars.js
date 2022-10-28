@@ -11,7 +11,7 @@ const sidebars = {
         {
             type: "doc",
             id: "quickstart/index",
-            label: "Install Modelstar",
+            label: "Quickstart",
         },
         {
             type: "category",
@@ -47,11 +47,11 @@ const sidebars = {
                         id: "api/cli/index",
                     },
                     collapsed: true,
-                    items: ["api/cli/use"],
+                    items: ["api/cli/use", "api/cli/register"],
                 },
                 {
                     type: "category",
-                    label: "modelstar",
+                    label: "ML SQL function",
                     link: {
                         type: "doc",
                         id: "api/modelstar-module/index",

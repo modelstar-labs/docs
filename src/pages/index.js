@@ -15,8 +15,8 @@ function HomepageHeader() {
             <div className={styles.homepageHero}>
                 <LogoSvg className={styles.heroLogo} role="img" />
                 <h1>{siteConfig.title}</h1>
-                <h3>Bringing Python's super-power to SQL</h3>
-                <p>through bilingual data programming DevOps.</p>
+                <h3>Bringing ML's Super-power to Snowflake SQL</h3>
+                <p>1 Line SQL for End-to-end Forecasting and Churn Prediction</p>
                 <div className={styles.heroCTA}>
                     <Link
                         className="button button--secondary button--md"
@@ -45,7 +45,7 @@ export default function Home() {
         >
             <main>
                 <HomepageHeader />
-                <div className={styles.homepageVideoContainer}>
+                {/* <div className={styles.homepageVideoContainer}>
                     <iframe
                         className={styles.homepageVideo}
                         src="https://www.youtube.com/embed/${youtubeID}?controls=0"
@@ -54,7 +54,7 @@ export default function Home() {
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen
                     />
-                </div>
+                </div> */}
             </main>
         </Layout>
     );

@@ -1,9 +1,9 @@
-# Install Modelstar and Connect to Snowflake
+# Quickstar: Install Modelstar and Connect to Snowflake
 
 In just a few minutes you can train and deploy a ML model inside your data warehouses/lakehouse.
 
 
-## Installation
+## Step #1: Install Modelstar CLI tool
 
 To get started with Moelstar, install the Modelstar Python package into your local Python environment.
 
@@ -13,22 +13,37 @@ $ pip install modelstar
 
 :::tip
 
-Install `modelstar` within a Python virtual environment.
-
-Hint: `pyenv`, `virtualenv`, `poetry`
+It's recommended to install `modelstar` within a Python virtual environment using `pyenv`, `virtualenv`, or `poetry`.
 
 :::
 
+## Step #2: Initialize a Modelstar ML Project
 
-## Connect to your data-platform
+This step creates a local project folder, named **_my_project_**, at the location you are running this command. The folder includes config, command and algorithm files.
 
+```shell
+$ modelstar init my_project
+```
+
+:::tip
+
+`modelstar init <project_name>` is the base command, where <project_name> can be replaced with the name of your choice.
+
+`modelstar init .` can be used to initialize the project inside the current folder location. Running this command will create all the necessary files within the current folder location and name the project using the folder's name.
+
+** For DBT users: ** You can also initialize a Modelstar project inside a DBT project. A more detailed tutorial on how to use DBT to orchestrate Modelstar ML will be posted.
+:::
+
+## Step #3: Handshake with Snowflake
+
+#### Config `modelstar.yml`
 :::note
 
-Modelstar currently supports only Snowflake. Support for other data-platforms are on the roadmap.
+This step requires manual editing of a yml file. Find the file and open it with your favorite editor.
 
 :::
 
-The `modelstar.toml` file is used to set and configure the parameter of modelstar. This file will also be used to enter your credentials to communication with your data platform.
+The `modelstar.yml` file is used to set and configure the parameter of modelstar. This file will also be used to enter your credentials to communication with your data platform.
 
 The following is an example to use a Snowflake account:
 
@@ -55,14 +70,14 @@ These credentials are never shared with Modelstar and only live on your local ma
 
 :::danger
 
-Don't forget to remove this file from your version control, since it contains sensitive information.
+Don't commit this file to your version control, since it contains sensitive information. The best way is to add it to gitignore file.
 
 :::
 
 First, you configure a named session, which will contain the details of your account you will be working with. As an example, here we are using a Snowflake account, and naming the session as `snowflake-test`, which contains the account details. You will later use this session name when starting a modelstar session.
 
 
-## Start your Modelstar session
+#### Ping Snowflake
 
 The `modelstar` command line interface is available when you installed Modelstar in the first step. We can now start a Modelstar session from your terminal. Run the following:
 
@@ -94,56 +109,11 @@ This will give the following output, which shows you the available databases for
 +----------------------+-----------------------+-------------------------------------------------------+--------------+
 ```
 
-:::tip
 
-The `modelstar use <named-session>` could also be used to debug your `modelstart.toml` configuration.
+<!-- Need more revision -->
+## Step $4: Register a Modelstar ML Algorithm
 
-:::
-
-## Register a Python UDF
-
-Using the `modelstar` cli you can register a function as a UDF using the command `modelstar register function <file_location>:<function_handler>` along with the location of the function and the function handler. Let's use the sample function provided with the project template:
-
-```py title="./samples/functions/find_capital.py"
-
-from modelstar import modelstar_read_path
-import pandas as pd
-
-FILE_1 = modelstar_read_path(local_path='./samples/functions/country-capitals.csv')
-
-# highlight-start
-def find_capital(country_name: str) -> str:
-
-    cinfo = pd.read_csv(FILE_1)
-
-    country_details = cinfo.loc[cinfo['CountryName'] == country_name]
-    capital_name = country_details.iloc[0]['CapitalName']
-
-    return capital_name
-# highlight-end
-```
-
-The function `find_capital` loads a file that contains a list of country names and its capital. It takes in the `country_name` as an argument and returns it's `capital_name`.
-
-:::note
-
-When you are defining a Python function that you want register as a UDF, you need to also define the parameter types and the return type. The types that are available to be used for a UDF are: `str`, `int`, `float`, `bool`, `dict`, `list`.
-
-:::
-
-:::note
-
-`modelstar` takes care of finding and packaging the dependencies that you have specified in your .py file. This also includes any file (such as a .csv, .txt, .pkl, .joblib) you are loading. To make local data files availalbe for your function execution, please use the `modelstar_read_path` from the `modelstar` package to load the file.
-
-Why do we do this?
-
-Doing it this was way you can make sure your functions can be tested locally with its depenedencies (modules, libraries and local data files) without involving any specific code dependent of your data platform. Modelstar takes care of packaing and your functions as UDFs as it is required by the data platform.
-
-:::
-
-<!-- TODO: For more information on writing a UDF can be found here... API. -->
-
-To register the UDF to your data-platform, you would have to run the following command:
+Using the `modelstar` cli you can register a function as a UDF using the command `modelstar register function <file_location>:<function_handler>` along with the location of the function and the function handler. 
 
 ```
 $ modelstar register function samples/data_functions/find_capital.py:find_capital
