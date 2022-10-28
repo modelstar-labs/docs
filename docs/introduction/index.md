@@ -1,26 +1,27 @@
 # Introduction
 
-ModelStar provides easy-to-use tools to deploy Python data transformation code as UDFs (User Defined Functions) and Stored Procedures inside Snowflake.
+ModelStar enables data teams to get more done with less SQL. With a few lines of SQL, data warehouse/lakehouse users can:
+- Train and deploy AI and machine learning models. 
+- Receive and send data to SaaS services.
+- Create data objects.
+
+## Who are the target users?
+- Anyone who knows basic SQL. 
+- Snowflake and DBT users.
 
 :::info
 
-We will add support to other data platforms such as Databricks and BigQuery after v0.5.
+We will add support to other data platforms such as Databricks, Redshift, before v0.8.
 
 :::
 
-## How does Modelstar work?
+## How does Modelstar work in the modern data stack?
 
-<h3>Life cycle management of Snowflake Python UDFs/Stored-Procedures </h3>
 
 ![How does Modelstar work?](./how_modelstar_works.png)
-Modelstar streamlines Snowflake UDFs and Store Procedures deployment with:
 
--   Automagically dependency mapping
-    -   libraries
-    -   local packages
-    -   local files
--   Support of most Python testing frameworks
--   Integration with Git for version control
+Modelstar streamlines enables SQL users to do more with less coding:
+
 
 :::info
 

@@ -11,7 +11,7 @@ const sidebars = {
         {
             type: "doc",
             id: "quickstart/index",
-            label: "Quickstart",
+            label: "Install Modelstar",
         },
         {
             type: "category",
@@ -20,14 +20,16 @@ const sidebars = {
                 type: "generated-index",
             },
             collapsed: false,
-            items: ["tutorials/create-a-udf-project"],
+            items: ["tutorials/sales-forecasting-inside-snowflake"],
         },
         // Currently in Draft, Will be hidden in production .
+        /*
         {
             type: "doc",
             id: "bilingualism/index",
             label: "Python + SQL",
         },
+        */
         {
             type: "category",
             label: "API",
@@ -45,7 +47,7 @@ const sidebars = {
                         id: "api/cli/index",
                     },
                     collapsed: true,
-                    items: ["api/cli/use", "api/cli/register"],
+                    items: ["api/cli/use"],
                 },
                 {
                     type: "category",
@@ -56,8 +58,8 @@ const sidebars = {
                     },
                     collapsed: true,
                     items: [
-                        "api/modelstar-module/read_file_path",
-                        "api/modelstar-module/write_file_path",
+                        "api/modelstar-module/univariant-time-series-forecast",
+                        /* "api/modelstar-module/write_file_path", */
                     ],
                 },
             ],
