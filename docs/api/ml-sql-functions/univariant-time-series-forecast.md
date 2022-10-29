@@ -1,3 +1,6 @@
+import Dashboard from './forecast-dashboard.png';
+import SampleData from './time-series-sample-data.png';
+
 # univariant_time_series_forecast
 
 ## Use case and tutorial
@@ -18,8 +21,7 @@ Extended reading. Snowflake docs about:
 
 Sample dataset:
 
-![Data sample](./time-series-sample-data.png)
-
+<img src={SampleData} width="300"/>
 
 ---
 ## Syntax
@@ -57,6 +59,19 @@ univariant_time_series_forecast(<table_name>,
 
 ### Example
 
+#### SQL statement
 ```sql
 CALL univariant_time_series_forecast('sales_table', 'sales_date', 'total_sales', 24, 'M');
 ```
+
+#### Description
+
+Based on historical `sales_date` and `total_sales` data in `sales_table`, forecast the `total_sales` value for the next `24` `M` (months).
+
+#### Result
+
+All historical and forecased data is materilized as a new table. 
+
+A forecast dashboard is auto-generated for checking modeling accuracy, discovered trends, and predictions.
+
+<img src={Dashboard} width="400"/>
