@@ -51,14 +51,14 @@ const sidebars = {
                 },
                 {
                     type: "category",
-                    label: "ML SQL function",
+                    label: "ML SQL functions",
                     link: {
                         type: "doc",
-                        id: "api/modelstar-module/index",
+                        id: "api/ml-sql-functions/index",
                     },
                     collapsed: true,
                     items: [
-                        "api/modelstar-module/univariant-time-series-forecast",
+                        "api/ml-sql-functions/univariant-time-series-forecast",
                         /* "api/modelstar-module/write_file_path", */
                     ],
                 },

@@ -11,7 +11,7 @@ ModelStar enables data teams to get more done with less SQL. With a few lines of
 
 :::info
 
-We will add support to other data platforms, such as Databricks, Redshift, soon
+We will soon add support to other data platforms, such as Databricks, Redshift.
 
 :::
 
@@ -20,12 +20,9 @@ We will add support to other data platforms, such as Databricks, Redshift, soon
 
 ![How does Modelstar work?](./how_modelstar_works.png)
 
-Modelstar streamlines enables SQL users to do more with less coding:
-
-
 :::info
 
-Modelstar is currently in the pre-release phase. We're working with design partners to polish and prioritize features. Interested in becoming a design partners, drop us a line: dev@modelstar.io
+Modelstar is currently in the pre-release phase. We're working with design partners to polish and prioritize features. Interested in becoming a design partner and recieving timely product updates? Drop us a line: dev@modelstar.io
 
 :::
 

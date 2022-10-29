@@ -17,6 +17,7 @@ It's recommended to install `modelstar` within a Python virtual environment usin
 
 :::
 
+---
 ## Step #2: Initialize a Modelstar ML Project
 
 This step creates a local project folder, named **_my_project_**, at the location you are running this command. The folder includes config, command and algorithm files.
@@ -34,6 +35,7 @@ $ modelstar init my_project
 ** For DBT users: ** You can also initialize a Modelstar project inside a DBT project. A more detailed tutorial on how to use DBT to orchestrate Modelstar ML will be posted.
 :::
 
+---
 ## Step #3: Handshake with Snowflake
 
 #### Config `modelstar.yml`
@@ -109,7 +111,7 @@ This will give the following output, which shows you the available databases for
 +----------------------+-----------------------+-------------------------------------------------------+--------------+
 ```
 
-
+---
 <!-- Need more revision -->
 ## Step #4: Register a Modelstar ML Algorithm
 
