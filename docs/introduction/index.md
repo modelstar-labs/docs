@@ -1,3 +1,10 @@
+---
+title: Modelstar introduction
+description: What is Modelstar?
+# image: a thumbnail image to be shown in social media cards
+keywords: [data, warehouse, machine, learning, sql, python]
+---
+
 # Introduction
 
 ModelStar provides easy-to-use tools to deploy Python data transformation code as UDFs (User Defined Functions) and Stored Procedures inside Snowflake.

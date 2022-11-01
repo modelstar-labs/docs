@@ -31,7 +31,7 @@
     border-radius: 5px;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    width: 650px;
+    /* width: 650px; */
     height: calc(0.5625 * 560px);
     background-color: lightgray;
 }
@@ -44,14 +44,14 @@
 
 @media screen and (max-width: 768px) {
     .homepageVideo {
-        width: 400px;
+        /* width: 400px; */
         height: calc(0.5625 * 400px);
     }
 }
 
 @media screen and (max-width: 425px) {
     .homepageVideo {
-        width: 250px;
+        /* width: 250px; */
         height: calc(0.5625 * 250px);
     }
 }
