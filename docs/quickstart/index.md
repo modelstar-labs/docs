@@ -38,29 +38,32 @@ $ modelstar init my_project
 ---
 ## Step #3: Handshake with Snowflake
 
-#### Config `modelstar.yml`
+#### Config `modelstar.config.yaml`
 :::note
 
-This step requires manual editing of a yml file. Find the file and open it with your favorite editor.
+This step requires manual editing of a yaml file. Find the file and open it with your favorite editor.
 
 :::
 
-The `modelstar.yml` file is used to set and configure the parameter of modelstar. This file will also be used to enter your credentials to communication with your data platform.
+The `modelstar.config.yaml` file is used to set and configure the parameter of modelstar. This file will also be used to enter your credentials to communication with your data platform.
 
 The following is an example to use a Snowflake account:
 
-```toml title="./modelstar.toml"
+```yaml title="./modelstar.config.yaml"
 
-[snowflake-test]
-
-username = "<username>"
-password = "<password>"
-account = "<account>"
-warehouse = "<warehouse_name>"
-role = "<role_name>"
-database = "<database>"
-schema = "<schema>"
-stage = "<stage>"
+# MODELSTAR CONFIGURATION FILE
+---
+sessions:
+    - name: snowflake-test
+      connector: snowflake
+      config:
+          account: WQA6****
+          username: [username]
+          password: [password]
+          database: MODELSTAR_TEST
+          schema: PUBLIC
+          stage: test
+          warehouse: COMPUTE_WH
 
 ```
 
@@ -81,7 +84,7 @@ First, you configure a named session, which will contain the details of your acc
 
 #### Ping Snowflake
 
-The `modelstar` command line interface is available when you installed Modelstar in the first step. We can now start a Modelstar session from your terminal. Run the following:
+We can now start a Modelstar session from your terminal. Run the following:
 
 ```shell
 $ modelstar use snowflake-test
@@ -93,7 +96,7 @@ Make sure you are running all the `modelstar` commands from the root of your pro
 
 :::
 
-This will give the following output, which shows you the available databases for your named-seesion, here it is `snowflake-test`.
+This will give the following output, which shows you the available databases for your named-session, here it is `snowflake-test`.
 
 ```
 	Loading configuration: [snowflake-test]
