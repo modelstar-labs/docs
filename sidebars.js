@@ -20,7 +20,7 @@ const sidebars = {
                 type: "generated-index",
             },
             collapsed: false,
-            items: ["tutorials/sales-forecasting-inside-snowflake"],
+            items: ["tutorials/sales-forecasting-inside-snowflake/index"],
         },
         // Currently in Draft, Will be hidden in production .
         /*

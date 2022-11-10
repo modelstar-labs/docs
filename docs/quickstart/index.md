@@ -1,4 +1,4 @@
-# Quickstar: Install Modelstar and Connect to Snowflake
+# Quickstart: Install Modelstar and Connect to Snowflake
 
 In just a few minutes you can train and deploy a ML model inside your data warehouses/lakehouse.
 

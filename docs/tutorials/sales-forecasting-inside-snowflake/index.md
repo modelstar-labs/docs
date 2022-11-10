@@ -1,8 +1,18 @@
-import ForecastChart from './sales-forecast-assets/forecast-chart.png';
+---
+title: Forecast Sales inside Snowflake with 1 Line of SQL
+description: Forecast Sales inside Snowflake with 1 Line of SQL
+sidebar_label: Forecast Sales inside Snowflake
+keywords:
+  - docs
+  - docusaurus
+# image: ./forecast-chart.png
+---
+
+import ForecastChart from './forecast-chart.png';
 
 # Forecast Sales inside Snowflake with 1 Line of SQL
 
-![title image](./sales-forecast-assets/title-image.png)
+![title image](./title-image.png)
 
 This tutorial provides the steps to build a sales forecasting model and a report. It covers:
 - **Basic concept**: about sales forecasting use cases and technology.
@@ -77,7 +87,7 @@ $ modelstar use snowflake-test
 ```
 `modelstar use <session name>` is the command, if you gave another session name, use that to replace `<session name>`. A success ping should lead to something like:
 
-![Ping Result](./sales-forecast-assets/ping_snowflake_result.png)
+![Ping Result](./ping_snowflake_result.png)
 
 
 ### Step #5: Register the forecast algorithm to Snowflake
@@ -89,7 +99,7 @@ $ modelstar register forecast:univariate_time_series_forecast
 
 Success message is:
 
-![Register result](./sales-forecast-assets/register-success-message.png)
+![Register result](./register-success-message.png)
 
 ### Step #6: Upload sample sales data to Snowflake
 If you want to try the forecast algorithm on a sample sales dataset, run this command to create a data table in your data warehouse. You can skip this step if you want to try your own data.
@@ -100,7 +110,7 @@ $ modelstar create table sample_data/sales.csv:SALES_ALL
 
 This command uploads sales.csv file to Snowflake and creates a table called 'SALES_ALL'.
 
-![Datatable creation result](./sales-forecast-assets/create-data-result.png)
+![Datatable creation result](./create-data-result.png)
 
 ## Build a forecast model using a SQL 1-linear
 
@@ -112,7 +122,7 @@ CALL UNIVARIATE_TIME_SERIES_FORECAST('SALES_ALL', 'DS', 'Y', 40, 'M');
 ```
 It means: to predict the next `40` `M` (months) of `Y` value based on historical data in `SALES_ALL` table, where `DS` is the time column.
 
-![Forecast model](./sales-forecast-assets/1-liner.png)
+![Forecast model](./1-liner.png)
 
 
 ### To run the forecasting algorithm on your own data
@@ -146,10 +156,10 @@ $ modelstar check <run_id>
 ```
 
 The following message should be seen in your terminal:
-![check run report](./sales-forecast-assets/fetch-result.png)
+![check run report](./fetch-result.png)
 
 As it mentions, a report will show up in your browser:
-![Report](./sales-forecast-assets/report.png)
+![Report](./report.png)
 
 
 ### What's in the report
@@ -158,7 +168,7 @@ The report includes 3 sections:
 
 - **Meta information of this run**
 
-    ![Modeling meta data](./sales-forecast-assets/meta-info.png)
+    ![Modeling meta data](./meta-info.png)
 
 
 - **Forecasting chart**: to check modeling quality and forecast results.
@@ -167,7 +177,7 @@ The report includes 3 sections:
 
 - **Component analysis**: to illustrate trend and seasonality your model has "learned", including an overall trend, and yearly and weekly seasonality (cyclical patterns over 1 year/week).
 
-    ![Trend chart](./sales-forecast-assets/trend-chart.png)
+    ![Trend chart](./trend-chart.png)
 
 :::note
 **GLOSSARY:**
