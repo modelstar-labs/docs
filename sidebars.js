@@ -32,7 +32,7 @@ const sidebars = {
         */
         {
             type: "category",
-            label: "API",
+            label: "Modelstar API",
             link: {
                 type: "doc",
                 id: "api/index",
@@ -47,7 +47,7 @@ const sidebars = {
                         id: "api/cli/index",
                     },
                     collapsed: true,
-                    items: ["api/cli/use", "api/cli/register"],
+                    items: ["api/cli/use", "api/cli/register", "api/cli/create", "api/cli/check"],
                 },
                 {
                     type: "category",

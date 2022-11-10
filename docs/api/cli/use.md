@@ -25,7 +25,7 @@ This refers to the name of the session pointing to its credentails in the file `
 **Usage of the command**
 
 ```
->>> modelstar use snowflake-demo-config
+$ modelstar use snowflake-demo-config
 ```
 
 **Output of the command**

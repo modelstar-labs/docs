@@ -33,7 +33,7 @@ This refers to a colon separated function name reference that you would like to 
 **Usage of the command**
 
 ```
->>> modelstar register forecast:univariate_time_series_forecast
+$ modelstar register forecast:univariate_time_series_forecast
 ```
 
 **Output of the command**
