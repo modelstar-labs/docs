@@ -58,7 +58,7 @@ const sidebars = {
                     },
                     collapsed: true,
                     items: [
-                        "api/ml-sql-functions/univariant-time-series-forecast",
+                        "api/ml-sql-functions/univariant-time-series-forecast/index",
                         /* "api/modelstar-module/write_file_path", */
                     ],
                 },
