@@ -26,7 +26,7 @@ This refers to a colon separated function name reference that you would like to 
 
 **Available builtin ML functions are:**
 
-- `forecast:univariate_time_series_forecast` : [univariate_time_series_forecast](/docs/api/ml-sql-functions/univariant-time-series-forecast/index)
+- `forecast:univariate_time_series_forecast` : [univariate_time_series_forecast](/docs/api/ml-sql-functions/univariate-time-series-forecast/)
 
 ### Example
 
