@@ -10,6 +10,7 @@ image: ./title-image.png
 ---
 
 import ForecastChart from './forecast-chart.png';
+import Overview from './overview.png';
 
 # Forecast Sales inside Snowflake with 1 Line of SQL
 
@@ -24,7 +25,7 @@ This tutorial provides the steps to build a sales forecasting model and a report
 
 By the end of this example, you will know how to train a forecast model inside Snowflake, and generate a report showing model performance like this:
 
-<!-- TODO @helin: what is supposed to be here?  -->
+<img src={Overview} width="350"/>
 
 ## What is Forecasting and its use cases
 
@@ -183,7 +184,18 @@ After the model training is finished, in the Snowflake Results window, a success
 }
 ```
 
-It means a table named "RESULT_UNIVARIATE_TIME_SERIES_FORECAST" has been created to materialize the prediction data, and the run id ("3NvQXnHQqUdYG4Fu") can help you pull a prediction report. Simply run this command in your local computer:
+It means a table named "RESULT_UNIVARIATE_TIME_SERIES_FORECAST" has been created to materialize the prediction data, and the run id ("3NvQXnHQqUdYG4Fu") can help you pull a prediction report. 
+
+
+#### Check the prediction data table
+There're 4 columns in the table: 
+- `DS` (datetime): time
+- `Y_FORECAST`, `YHAT_LOWER`, `YHAT_UPPER`  (float):  mean, lower and upper bonds of the predicted value (see `Uncertainty Intervals` in the Glossary section for their meaning).
+
+![prediction data](result-table.png)
+
+#### Check the forecasting report
+Simply run this command in your local computer:
 
 ```shell
 $ modelstar check <run_id>
