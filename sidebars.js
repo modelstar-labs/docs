@@ -18,6 +18,9 @@ const sidebars = {
             label: "Tutorials",
             link: {
                 type: "generated-index",
+                title: "ML in SQL Tutorials",
+                description:
+                    "Let's learn about how to use Modelstar to run Machine Learning with SQL inside Swnoflake!",
             },
             collapsed: false,
             items: ["tutorials/sales-forecasting-inside-snowflake/index"],
@@ -47,7 +50,12 @@ const sidebars = {
                         id: "api/cli/index",
                     },
                     collapsed: true,
-                    items: ["api/cli/use", "api/cli/register", "api/cli/create", "api/cli/check"],
+                    items: [
+                        "api/cli/use",
+                        "api/cli/register",
+                        "api/cli/create",
+                        "api/cli/check",
+                    ],
                 },
                 {
                     type: "category",
