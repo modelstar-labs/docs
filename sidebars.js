@@ -51,7 +51,7 @@ const sidebars = {
                 },
                 {
                     type: "category",
-                    label: "ML SQL functions",
+                    label: "ML functions for SQL",
                     link: {
                         type: "doc",
                         id: "api/ml-sql-functions/index",

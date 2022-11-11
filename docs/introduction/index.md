@@ -4,7 +4,7 @@ ModelStar is the easiest way to ship and manage machine learning solutions insid
 
 ## Modelstar is for the modern data stack
 
-![How does Modelstar work?](./how-modelstar-works.png)
+<!-- ![How does Modelstar work?](./how-modelstar-works.png) -->
 
 
 ## Who are the users?

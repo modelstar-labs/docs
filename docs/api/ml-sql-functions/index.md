@@ -1,4 +1,4 @@
-# Modelstar ML SQL functions
+# ML functions for SQL
 
 This family of SQL functions can be used to complete end-to-end ML projects. It means the functions automatically:
 - generate and deploy ML models;

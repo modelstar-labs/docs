@@ -8,7 +8,7 @@ sidebar_label: create
 
 This command is used to create objects within your data warehouse. The objects that are supported at the moment are:
 
-- **Table**
+-   [**Table**](#table)
 
 ## Command
 
@@ -20,9 +20,13 @@ modelstar create <sub-command> <object-data-pointer>
 
 #### Available `<sub-command>`
 
-##### `table` 
+#### `table`
 
-`<object-data-pointer>`
+You can use this subcommand to create a table in your data warehouse under the database and schema mentioned in configuration file. The use of the command references a `<object-data-pointer>` which is colon separated local data to warehouse table name mapper such as `<local_data_file_location>:<table_name>`. Example: `sample_data/sales.csv:SALES`, where the `sample_data/sales.csv` is the local relative path to find the `csv` file and the `SALES` is the name of the table that you want to create in your warehouse with this data file.
+
+#### `<object-data-pointer>`
+
+Referen to the individual sub-command for information about this.
 
 ### Example
 
