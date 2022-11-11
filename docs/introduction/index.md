@@ -2,12 +2,12 @@
 
 ModelStar is the easiest way to ship and manage machine learning solutions inside Snowflake, with only a few lines of SQL.
 
-## Modelstar is for the modern data stack
+## Modelstar works with the modern data stack
 
-<!-- ![How does Modelstar work?](./how-modelstar-works.png) -->
+![How does Modelstar work?](./how-modelstar-works.png)
 
 
-## Who are the users?
+## Who are Modelstar built for?
 - Snowflake and DBT users.
 - Anyone who knows basic SQL.
 - Analyst, data engineers.
