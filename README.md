@@ -26,7 +26,7 @@ $ USE_SSH=true yarn deploy
 Not using SSH:
 
 ```
-$ GIT_USER=krish-adi GIT_PASS=$GIT_PASS npm run deploy
+$ GIT_USER=krish-adi GIT_PASS=$GITHUB_MODELSTAR_KEY npm run deploy
 ```
 
 # Notes:
