@@ -15,8 +15,8 @@ function HomepageHeader() {
             <div className={styles.homepageHero}>
                 <LogoSvg className={styles.heroLogo} role="img" />
                 <h1>{siteConfig.title}</h1>
-                <h3>Bringing Python's super-power to SQL</h3>
-                <p>through bilingual data programming DevOps.</p>
+                <h3>Bringing ML's Super-power to Snowflake SQL</h3>
+                <p>1 Line SQL for End-to-end Forecasting and Churn Prediction</p>
                 <div className={styles.heroCTA}>
                     <Link
                         className="button button--secondary button--md"
@@ -39,14 +39,6 @@ export default function Home() {
         >
             <main>
                 <HomepageHeader />
-                <div className={styles.homepageVideoContainer}>
-                    <video
-                        className={styles.homepageVideo}
-                        src={"https://cdn.modelstar.io/demo.mp4"}
-                        controls="controls"
-                        autoPlay={true}
-                    />
-                </div>
             </main>
         </Layout>
     );

@@ -7,32 +7,34 @@ keywords: [data, warehouse, machine, learning, sql, python]
 
 # Introduction
 
-ModelStar provides easy-to-use tools to deploy Python data transformation code as UDFs (User Defined Functions) and Stored Procedures inside Snowflake.
+ModelStar is the easiest way to ship and manage machine learning solutions inside Snowflake, with only a few lines of SQL.
+
+## Modelstar works with the modern data stack
+
+![How does Modelstar work?](./how-modelstar-works.png)
+
+Modelstar helps you ship and manage ML solutions in your data warehouse, with only a few lines of SQL. It currently support Snowflake. It works seemlessly within the modern data stack combining the powers of Snowflake and DBT.
+
+## Who are Modelstar built for?
+
+-   Snowflake and DBT users.
+-   Anyone who knows basic SQL.
+-   Analyst, data engineers.
+
+## Why we build Modelstar?
+
+We've shipped 20+ ML solutions. All the projects started with:
+
+-   Jupyter Notebook
+-   CSV files containing training data
+-   `import pandas as pd`
+
+This "notebook-centric ML development flow" requires multi-disciplinary expertise in statistics, Python scripting, ML infra, and software engineering.
+
+But, is it necessary? If not, how to make it ridiculously simple? Modelstar is our attempt to simplify ML for analysts. Our design philosophy is: **Data is the most critical component in ML, so shipping ML solutions should be as easy as creating data objects.**
 
 :::info
-
-We will add support to other data platforms such as Databricks and BigQuery after v0.5.
-
-:::
-
-## How does Modelstar work?
-
-<h3>Life cycle management of Snowflake Python UDFs/Stored-Procedures </h3>
-
-![How does Modelstar work?](./how_modelstar_works.png)
-Modelstar streamlines Snowflake UDFs and Store Procedures deployment with:
-
--   Automagically dependency mapping
-    -   libraries
-    -   local packages
-    -   local files
--   Support of most Python testing frameworks
--   Integration with Git for version control
-
-:::info
-
-Modelstar is currently in the pre-release phase. We're working with design partners to polish and prioritize features. Interested in becoming a design partners, drop us a line: dev@modelstar.io
-
+We're interested in what you think about ML and data, drop us a line at dev@modelstar.io
 :::
 
 <!-- TODO: Roadmap -->

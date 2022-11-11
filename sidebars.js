@@ -18,19 +18,16 @@ const sidebars = {
             label: "Tutorials",
             link: {
                 type: "generated-index",
+                title: "ML in SQL Tutorials",
+                description:
+                    "Let's learn about how to use Modelstar to run Machine Learning with SQL inside Swnoflake!",
             },
             collapsed: false,
-            items: ["tutorials/create-a-udf-project"],
-        },
-        // Currently in Draft, Will be hidden in production .
-        {
-            type: "doc",
-            id: "bilingualism/index",
-            label: "Python + SQL",
+            items: ["tutorials/sales-forecasting-inside-snowflake/index"],
         },
         {
             type: "category",
-            label: "API",
+            label: "Modelstar API",
             link: {
                 type: "doc",
                 id: "api/index",
@@ -45,19 +42,24 @@ const sidebars = {
                         id: "api/cli/index",
                     },
                     collapsed: true,
-                    items: ["api/cli/use", "api/cli/register"],
+                    items: [
+                        "api/cli/use",
+                        "api/cli/register",
+                        "api/cli/create",
+                        "api/cli/check",
+                    ],
                 },
                 {
                     type: "category",
-                    label: "modelstar",
+                    label: "ML functions for SQL",
                     link: {
                         type: "doc",
-                        id: "api/modelstar-module/index",
+                        id: "api/ml-sql-functions/index",
                     },
                     collapsed: true,
                     items: [
-                        "api/modelstar-module/read_file_path",
-                        "api/modelstar-module/write_file_path",
+                        "api/ml-sql-functions/univariate-time-series-forecast/index",
+                        /* "api/modelstar-module/write_file_path", */
                     ],
                 },
             ],
