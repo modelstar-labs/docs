@@ -54,6 +54,10 @@ const config = {
                 theme: {
                     customCss: require.resolve("./src/css/custom.css"),
                 },
+                gtag: {
+                    trackingID: "G-S874F13DG2",
+                    anonymizeIP: true,
+                },
             }),
         ],
     ],
@@ -61,6 +65,58 @@ const config = {
     themeConfig:
         /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
         ({
+            metadata: [
+                {
+                    name: "keywords",
+                    content:
+                        "snowflake, sql, machine, learning, python, data, warehouse",
+                },
+                {
+                    name: "description",
+                    content:
+                        "Modelstar - Run Machine Learning algorithms inside your data warehouse with 1 line of SQL.",
+                },
+                // {
+                //     property: "og:title",
+                //     content:
+                //         "Modelstar - Run Machine Learning algorithms inside your data warehouse with 1 line of SQL.",
+                // },
+                // {
+                //     name: "twitter:title",
+                //     content:
+                //         "Modelstar - Run Machine Learning algorithms inside your data warehouse with 1 line of SQL.",
+                // },
+                // {
+                //     property: "og:description",
+                //     content:
+                //         "Modelstar - Run Machine Learning algorithms inside your data warehouse with 1 line of SQL.",
+                // },
+                // {
+                //     name: "twitter:description",
+                //     content:
+                //         "Modelstar - Run Machine Learning algorithms inside your data warehouse with 1 line of SQL.",
+                // },
+                // {
+                //     property: "og:type",
+                //     content: "website",
+                // },
+                // {
+                //     property: "og:url",
+                //     content: "https://modelstar.io",
+                // },
+                // {
+                //     property: "og:image",
+                //     content: "https://cdn.modelstar.io",
+                // },
+                // {
+                //     name: "twitter:image",
+                //     content: "https://cdn.modelstar.io",
+                // },
+                // {
+                //     name: "twitter:card",
+                //     content: "summary_large_image",
+                // },
+            ],
             docs: {
                 sidebar: {
                     autoCollapseCategories: true,

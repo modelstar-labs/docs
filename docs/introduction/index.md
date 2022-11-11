@@ -1,3 +1,10 @@
+---
+title: Modelstar introduction
+description: What is Modelstar?
+# image: a thumbnail image to be shown in social media cards
+keywords: [data, warehouse, machine, learning, sql, python]
+---
+
 # Introduction
 
 ModelStar is the easiest way to ship and manage machine learning solutions inside Snowflake, with only a few lines of SQL.

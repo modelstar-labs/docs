@@ -25,12 +25,6 @@ function HomepageHeader() {
                         Get Started&nbsp;&nbsp;→
                     </Link>
                 </div>
-
-                {/* <video
-                        src={"https://www.youtube.com/watch?v=DdNXVcBEuuY"}
-                        controls="controls"
-                        autoplay="true"
-                    /> */}
             </div>
         </header>
     );
@@ -45,16 +39,6 @@ export default function Home() {
         >
             <main>
                 <HomepageHeader />
-                {/* <div className={styles.homepageVideoContainer}>
-                    <iframe
-                        className={styles.homepageVideo}
-                        src="https://www.youtube.com/embed/${youtubeID}?controls=0"
-                        title="YouTube video player"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen
-                    />
-                </div> */}
             </main>
         </Layout>
     );
