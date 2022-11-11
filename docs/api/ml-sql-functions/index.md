@@ -10,6 +10,5 @@ It's the easiest way to run forecast and churn analysis in Snowflake using the t
 ## Function list
 
 - Forecast
-  - [univariant_time_series_forecast](univariant-time-series-forecast)
-  - multivariant-time-series-forecast(WIP)
-- Churn prediction (to be released in v0.21)
+  - [univariate_time_series_forecast](univariate-time-series-forecast)
+  - multivariate-time-series-forecast(WIP)

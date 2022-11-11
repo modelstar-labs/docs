@@ -25,14 +25,6 @@ const sidebars = {
             collapsed: false,
             items: ["tutorials/sales-forecasting-inside-snowflake/index"],
         },
-        // Currently in Draft, Will be hidden in production .
-        /*
-        {
-            type: "doc",
-            id: "bilingualism/index",
-            label: "Python + SQL",
-        },
-        */
         {
             type: "category",
             label: "Modelstar API",
@@ -66,7 +58,7 @@ const sidebars = {
                     },
                     collapsed: true,
                     items: [
-                        "api/ml-sql-functions/univariant-time-series-forecast/index",
+                        "api/ml-sql-functions/univariate-time-series-forecast/index",
                         /* "api/modelstar-module/write_file_path", */
                     ],
                 },

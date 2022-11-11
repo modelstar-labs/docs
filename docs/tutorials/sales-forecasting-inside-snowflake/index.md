@@ -19,7 +19,7 @@ This tutorial provides the steps to build a sales forecasting model and a report
 
 -   **Basic concept**: about sales forecasting use cases and technology.
 -   **Modelstar CLI tool**: Modelstar installation guide
--   **`univariant_time_series_forecast` SQL syntax**: the SQL 1-liner to make forecast
+-   **`univariate_time_series_forecast` SQL syntax**: the SQL 1-liner to make forecast
 -   **Forecasting report**: forecast results ready to be consumed by business teams
 
 By the end of this example, you will know how to train a forecast model inside Snowflake, and generate a report showing model performance like this:
@@ -44,7 +44,7 @@ A good prediction algorithm should capture most of the components, and statistic
 
 ### The SQL 1-liner for forecasting
 
-Modelstar lets you ship and manage forecasting models and visualize modeling results with 1 line of SQL inside Snowflake. Under the hood, Modelstar provides pre-built forecast algorithms, and exposes them as a SQL stored procedure in your database. In this example, we will be using `univariant_time_series_forecast` ([API doc](../api/ml-sql-functions/univariant-time-series-forecast)). This API is based on an open source library [Prophet](https://facebook.github.io/prophet/), which is one of the most widely used forecasting algorithms in industry.
+Modelstar lets you ship and manage forecasting models and visualize modeling results with 1 line of SQL inside Snowflake. Under the hood, Modelstar provides pre-built forecast algorithms, and exposes them as a SQL stored procedure in your database. In this example, we will be using `univariate_time_series_forecast` ([API doc](../../api/ml-sql-functions/univariate-time-series-forecast)). This API is based on an open source library [Prophet](https://facebook.github.io/prophet/), which is one of the most widely used forecasting algorithms in industry.
 
 :::note
 Modelstar is built on the recently launched features from Snowflake and DBT, such as Snowpark and DBT Python Model. It automatically handles file I/O in Snowflake compute, dependencies and model artifacts.
@@ -156,8 +156,6 @@ CALL UNIVARIATE_TIME_SERIES_FORECAST('SALES', 'DS', 'Y', 40, 'M');
 
 It means: to predict the next `40` `M` (months) of `Y` value based on historical data in `SALES` table, where `DS` is the time column.
 
-<!-- TODO @helin can you do another shot of this? it will then reflect the changes we've applied. Do it with table 'SALES'  -->
-
 ![Forecast model](./1-liner.png)
 
 ### To run the forecasting algorithm on your own data
@@ -172,7 +170,7 @@ Under the hood, the forecast algorithm runs inside Snowflake as a Stored Procedu
 | `<forecast_period>`   | integer | forecast period                | 40          |
 | `<period_unit>`       | integer | unit alias of the given period | 'M' (month) |
 
-To config your own forecast period, check [this API doc](../api/ml-sql-functions/univariant-time-series-forecast) for a full list of unit alias.
+To config your own forecast period, check [this API doc](../../api/ml-sql-functions/univariate-time-series-forecast) for a full list of unit alias.
 
 ### Check the result
 
