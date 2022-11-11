@@ -1,29 +1,30 @@
 # Introduction
 
-ModelStar enables data teams to get more done with less SQL. With a few lines of SQL, data warehouse/lakehouse users can:
-- Train and deploy AI and machine learning models. 
-- Receive and send data to SaaS services.
-- Create data objects.
+ModelStar is the easiest way to ship and manage machine learning solutions inside Snowflake, with only a few lines of SQL.
 
-## Who are the target users?
-- Anyone who knows basic SQL. 
+## Modelstar is for the modern data stack
+
+![How does Modelstar work?](./how-modelstar-works.png)
+
+
+## Who are the users?
 - Snowflake and DBT users.
+- Anyone who knows basic SQL.
+- Analyst, data engineers.
+
+## Why we build Modelstar?
+We've shipped 20+ ML solutions. All the projects started with:
+- Jupyter Notebook
+- CSV files containing training data
+- `import pandas as pd`
+
+This "notebook-centric ML development flow" requires multi-disciplinary expertise in statistics, Python scripting, ML infra, and software engineering. 
+
+But, is it necessary? If not, how to make it ridiculously simple? Modelstar is our attempt to simplify ML for analysts. Our design philosophy is: **Data is the most critical component in ML, so shipping ML solutions should be as easy as creating data objects.**
+
 
 :::info
-
-We will soon add support to other data platforms, such as Databricks, Redshift.
-
-:::
-
-## How does Modelstar work in the modern data stack?
-
-
-![How does Modelstar work?](./how_modelstar_works.png)
-
-:::info
-
-Modelstar is currently in the pre-release phase. We're working with design partners to polish and prioritize features. Interested in becoming a design partner and recieving timely product updates? Drop us a line: dev@modelstar.io
-
+We're interested in what you think about ML and data, drop us a line at dev@modelstar.io
 :::
 
 <!-- TODO: Roadmap -->
