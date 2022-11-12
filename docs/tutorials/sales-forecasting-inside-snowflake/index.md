@@ -3,10 +3,9 @@ title: Forecast Sales inside Snowflake with 1 Line of SQL
 description: Forecast Sales inside Snowflake with 1 Line of SQL
 sidebar_label: Forecast Sales inside Snowflake
 keywords:
-    - sales forecast
-    - snowflake
-    - machine learning
-image: ./title-image.png
+    - docs
+    - modelstar
+image: https://cdn.modelstar.io/tutorial_1_social.png
 ---
 
 import ForecastChart from './forecast-chart.png';
