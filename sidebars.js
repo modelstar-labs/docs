@@ -20,10 +20,13 @@ const sidebars = {
                 type: "generated-index",
                 title: "ML in SQL Tutorials",
                 description:
-                    "Let's learn about how to use Modelstar to run Machine Learning with SQL inside Swnoflake!",
+                    "Let's learn how to use Modelstar to run Machine Learning with SQL inside Swnoflake!",
             },
             collapsed: false,
-            items: ["tutorials/sales-forecasting-inside-snowflake/index"],
+            items: [
+                "tutorials/sales-forecasting-inside-snowflake/index",
+                "tutorials/churn-prediction-inside-snowflake/index",
+            ],
         },
         {
             type: "category",
