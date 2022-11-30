@@ -11,4 +11,5 @@ It's the easiest way to run forecast and churn analysis in Snowflake using the t
 
 - Forecast
   - [univariate_time_series_forecast](univariate-time-series-forecast)
+  - [train_binary_classifier](train-binary-classifier)
   - multivariate-time-series-forecast(WIP)

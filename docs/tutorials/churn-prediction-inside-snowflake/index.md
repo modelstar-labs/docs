@@ -47,28 +47,75 @@ Modelstar provides an AutoML solution to enable SQL users to automatically obtai
 
 # Pre-requirements
 
-### 1) Install Modelstar CML tool
+### Install Modelstar
 
-<!-- To do: give some links to other articles -->
+Modelstar is an open source command line tool. Follow [Step #1-3](https://modelstar.io/docs/quickstart/) to install it. 
 
-### 2) Register the classifier AutoML algorithms to Snowflake
 
-<!-- To do: give the `modelstar register` command -->
+### Register the AutoML binary classification algorithm
 
-### 3) Sample data
+Run this command:
 
-<!-- To do: show how the data looks like, and how to upload it to Snowflake -->
+```shell
+$ modelstar register classifier:binary_classifier
+```
 
-# Train the churn prediction model
+A success message is like:
+![Register result](./register-churn.png)
 
-### Train the model
+### Sample data (optional)
 
-### Read the model performance report
+If you want to try our sample data, just run the following command in your Modelstar project directory.
 
-# Predict churn
+```shell
+$ # change to Modelstar project directory
+$ cd ./churn_project
+$ # upload the sample data and create a table in snowflake
+$ modelstar create table sample_data/customer_churn_data.csv:CUSTOMER
+```
+Here is a snapshot of the data table. 
 
-### Run inference function
+![data sample](data-head.png)
+
+It has 7k rows and 21 columns. Some columns denote user profile, such as "GENDER". Some (e.g. "CONTRACT") contain user behavior data. We will use both user profile and behavior data as `feature`s to build a ML model. Among all, "CHURN" is a special column which labels whether a customer has churned. Note that "CHURN" is `binary`: either "Yes" or "No". This is the `target` column for modeling. The goal is to let the model predict `target` value based on given `feature`s.
+
+The same dataset has also been used in [a PyCaret's tutorial written by its creator Moez Ali](https://towardsdatascience.com/predict-customer-churn-the-right-way-using-pycaret-8ba6541608ac). It's recommended for those who're interested in how to train, select and fine-tune a model using PyCaret. Modelstar streamlines all the necessary steps and provides an abstract SQL interface, as shown in the next section.
+
+
+# Churn prediction model training
+
+### 1 line of SQL to train a model in Snowflake Worksheet
+
+Run the following SQL statement in Snowflake Worksheet if you use the sample data for training. Under the hood, 12 classification models (see the [full list of classification algorithms](../../api/ml-sql-functions/train-binary-classifier/#algorithm-details)) are automatically trained and ranked, then the best model was selected and fine-tuned. 
+
+```sql
+CALL TRAIN_BINARY_CLASSIFIER('CUSTOMER', 'CHURN', ['CUSTOMERID']);
+```
+Semantic meaning of this statement: to train a binary classifier using data in "CUSTOMER" table, where column "CHURN" is the `target`, and "CUSTOMERID" column should be ignored as it's not a good feature. See its [API doc](../../api/ml-sql-functions/train-binary-classifier/) to learn more about the parameters.
+
+The training time varies depending on the size of your WH engine. We use an x-small WH, and it takes 4.5 mins to finish. After the training is done, it returns a success message, including a `inference_function` (to be [discussed later](#run-inference-function)) and a `run_id` (to fetch the [model performance report](#model-performance-report)).
+
+![model training](sql-training.png)
+
+
+### Model performance report
+To fetch the report, simply run the following command in your terminal:
+
+```shell
+$ modelstar check <run_id>
+```
+
+A successful run looks like this:
+
+![fetch report](check-command.png)
+
+A model performance report is auto-generated, and ready to check.
+![model report](model-report.png)
+
+# Churn model inference
+
+### Run the inference function
 
 :::tip
-Modelstar also supports scheduling the inference through DBT. This feature is currently in development.
+You can also schedule model inference through DBT. This feature is currently WIP.
 :::

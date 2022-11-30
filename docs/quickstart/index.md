@@ -4,7 +4,7 @@ In just a few minutes you can train and deploy a ML model inside your data wareh
 
 ## Step #1: Install Modelstar CLI tool
 
-To get started with Modelstar, install the Modelstar Python package into your local Python environment.
+To get started, let's install the Modelstar command line tool. Modelstar is written in Python and distributed through [Pypi](https://pypi.org/), so we can simply use `pip`:  
 
 ```shell
 $ pip install modelstar
@@ -12,7 +12,7 @@ $ pip install modelstar
 
 :::tip
 
-It's recommended to install `modelstar` within a Python virtual environment using `pyenv`, `virtualenv`, or `poetry`.
+Modelstar has dependency on `Snowflake Python Connector`, which is [only compatible with Python 3.6-3.9](https://docs.snowflake.com/en/user-guide/python-connector-install.html#python). During our tests on M1 MacOS, we found Python 3.9 is more stable.  
 
 :::
 
@@ -109,6 +109,14 @@ This will give the following output, which shows you the available databases for
 | Aug 19, 2022 - 17:05 | SNOWPARK_PYTHON_DEMOS |                                                       | ACCOUNTADMIN |
 +----------------------+-----------------------+-------------------------------------------------------+--------------+
 ```
+
+:::tip
+**Congratulations!** Modelstar is correctly installed and configured. Now it's ready to use. 
+
+The following sections show an example of using one of the Modelstar ML algorithms to build a time series model. Check our [tutorials](../category/tutorials/) for other examples.
+
+:::
+----
 
 ## Step #4: Register a Modelstar ML Algorithm
 

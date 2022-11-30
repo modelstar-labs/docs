@@ -128,7 +128,7 @@ Run this command:
 $ modelstar register forecast:univariate_time_series_forecast
 ```
 
-Success message is:
+Success message is like:
 
 ![Register result](./register-success-message.png)
 

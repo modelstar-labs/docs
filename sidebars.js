@@ -18,7 +18,7 @@ const sidebars = {
             label: "Tutorials",
             link: {
                 type: "generated-index",
-                title: "ML in SQL Tutorials",
+                title: "Modelstar AutoML SQL Tutorials",
                 description:
                     "Let's learn how to use Modelstar to run Machine Learning with SQL inside Swnoflake!",
             },
@@ -62,7 +62,7 @@ const sidebars = {
                     collapsed: true,
                     items: [
                         "api/ml-sql-functions/univariate-time-series-forecast/index",
-                        /* "api/modelstar-module/write_file_path", */
+                        "api/ml-sql-functions/train-binary-classifier/index", 
                     ],
                 },
             ],
