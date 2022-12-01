@@ -28,11 +28,11 @@ This tutorial provides the steps to ship a churn prediction model and a model pe
 ### What's churn and why business teams track it
 Customer churn is one of the most important metrics for subscription-based business. It directly measures how many customers stop paying for a product or service, which tells how much customers value your product.
 
-For example, this graph is churn rates of Disney streaming products in the past 2 years. It shows the bundle product has the lowest churn rate, and the rate is quite stable over the 2-year's period.
+For example, this graph shows churn rates of Disney streaming products in the past 2 years. It shows the bundle product has the lowest churn rate, and the rate is quite stable over the 2-year's period.
 
 <img src={DisneyData} width="450"/>
 
-A growing business need to keep acquiring new customers, and prevent exiting ones from churning as well. It's more cost efficient if a company's business team can identify customers who are about to churn, and take actions to delight them before they leave.
+A growing business needs to keep acquiring new customers, while prevent exiting ones from churning as well. It's more cost efficient if a company's business team can identify customers who are about to churn, and take actions to delight them before they leave.
 
 
 ### A common process to run churn analysis
@@ -43,7 +43,7 @@ Data is never enough, so it's always a good idea to start small. Based on some p
 
 The next step is to choose analysis method. In this tutorial, we treat churn analysis as a prediction problem. A classifier model is to be trained to predict if a customer will or will not churn based on previous data.
 
-Business value will not be realized until the analyst team figures out how to prevent customers from leaving and provides actionable items, such as a new pricing model or post-sale support term. In this tutorial, we show a classifier model can also rank feature importance, which can be used as a good starting point to drill down what really matters to churn.
+Business value will not be realized until the analyst team figures out how to prevent customers from leaving and provide actionable items, such as a new pricing model or post-sale support term. In this tutorial, we show a classifier model that can rank feature importance, which can be used as a good starting point to drill down what really matters to churn.
 
 ### Modelstar AutoML streamlines churn predction modeling
 
@@ -55,7 +55,7 @@ Let's get started.
 
 ### Install Modelstar
 
-Modelstar is an open source command line tool. Follow [Step #1-3 in Quickstart page](https://modelstar.io/docs/quickstart/) to install it. 
+Modelstar is an open source command line tool. Follow [Step #1-3 in Quickstart page](https://modelstar.io/docs/quickstart/) to install it and initialize your session. 
 
 
 ### Register the AutoML binary classification algorithm
@@ -83,10 +83,10 @@ Here is a snapshot of the data table.
 
 ![data sample](data-head.png)
 
-It has 7k rows and 21 columns. Some columns denote user profile, such as "GENDER". Some (e.g. "CONTRACT") contain user behavior data. We will use both user profile and behavior data as `feature`s to build a ML model. Among all, "CHURN" is a special column which labels whether a customer has churned. Note that "CHURN" is `binary`: either "Yes" or "No". This is the `target` column for modeling. The goal is to let the model predict `target` value based on given `feature`s.
+It has 7k rows and 21 columns. Some columns denote user profile, such as "GENDER". Some (e.g. "CONTRACT") contain user behavior data. We will use both user profile and behavior data as `feature`s to build the ML model. Among all, "CHURN" is a special column which labels whether a customer has churned. Note that "CHURN" is `binary`: either "Yes" or "No". This is the `target` column for modeling. The goal is to let the model predict `target` value based on given `feature`s.
 
 :::tip
-The same dataset has also been used in [a PyCaret's tutorial written by its creator Moez Ali](https://towardsdatascience.com/predict-customer-churn-the-right-way-using-pycaret-8ba6541608ac). It's recommended for those who're interested in how to train, select and fine-tune a model using PyCaret. Modelstar streamlines all the necessary steps and provides an abstract SQL interface, as shown in the next section.
+The same dataset has also been used in [a PyCaret's tutorial written by its creator Moez Ali](https://towardsdatascience.com/predict-customer-churn-the-right-way-using-pycaret-8ba6541608ac). It's recommended for those who're interested in how to train, select and fine-tune a model using PyCaret. Modelstar streamlines all the necessary steps to implement this in Snowflake and provides an abstract SQL interface, as shown in the next section.
 :::
 
 ## Ship a churn prediction model in 3 simple steps
@@ -98,6 +98,7 @@ Run the following SQL statement in Snowflake Worksheet if you use the sample dat
 ```sql
 CALL TRAIN_BINARY_CLASSIFIER('CUSTOMER', 'CHURN', ['CUSTOMERID']);
 ```
+
 **Semantic meaning of this statement:** to train a binary classifier using data in "CUSTOMER" table, where column "CHURN" is the `target`, and "CUSTOMERID" column should be ignored as it's not a good feature. See its [API doc](../../api/ml-sql-functions/train-binary-classifier/) to learn more about the parameters.
 
 **Under the hood:** 12 models (see the [full list of classification algorithms](../../api/ml-sql-functions/train-binary-classifier/#algorithm-details)) are automatically trained and ranked, then the best model is selected and fine-tuned. 
