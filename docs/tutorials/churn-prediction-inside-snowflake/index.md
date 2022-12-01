@@ -6,15 +6,17 @@ keywords:
     - docs
     - modelstar
     - churn prediction
-# image: 
+image: https://raw.githubusercontent.com/modelstar-labs/modelstar-io-website/master/docs/tutorials/churn-prediction-inside-snowflake/title-image.png
 ---
 
+import TitleImage from './title-image.png';
 import DbtLogo from './dbt.png';
 import DisneyData from './disney-data.webp';
+import ConfusionMatrix from './cm.webp';
 
 # Churn prediction inside Snowflake with 1 Line of SQL
 
-![title image](./title-image.png)
+<img src={TitleImage} width="550"/>
 
 This tutorial provides the steps to ship a churn prediction model and a model performance report. It covers:
 
@@ -121,7 +123,7 @@ A successful run looks like this:
 
 The report is auto-generated. The table shows performance metrics of each model (including a dummy model) we just trained inside Snowflake, and the results are sorted based on `F1` score. 
 
-`Confusion matrix` and `AOC curve` of selected model (Linear Discriminant Analysis in our example) show more details about how well the model can predict positive and negative cases. 
+`Confusion matrix` and `AOC curve` of selected model (Linear Discriminant Analysis in our example) show more details about how well the model can predict positive and negative cases. Check "Glossary" at the end of this page for their meanings.
 
 Last but not least, our model also automatically ranks features based on their importance. This plot can provide critical insights for analysts on how to optimize user experience to improve churn. Note that, the feature importance plot may not show up every time as some algorithms (e.g., Naive Bayes) do not support feature ranking.
 
@@ -154,3 +156,13 @@ Execution of inference can be 3-4X faster than training, which is quite common. 
 We're working on new features that allow training and inference to be scheduled and materialized through [DBT](https://www.getdbt.com/). Stay tuned.
 :::
 
+:::note
+**GLOSSARY:**
+
+**F1 score:** A commonly-used model performance measure of imbalanced training data. It's the harmonic mean of the precision and recall, thus its value falls between 0 and 1, with 1 being the best result. Modelstar can automatically detect data skew and choose appropriate metrics to rank models.
+
+**ROC curve:** ROC curve stands for "Receiver Operating Characteristic curve". It's plotted as true positive (TP) rate vs. false positive (FP) rate. A ROC curve simply shows the correlation between TP and FP of a binary classification model. The ideal result is TP=1 and FP=0. However, an actual model performance is always tradeoff between the two metrics.
+
+**Confusion matrix:** It's a table with predicted and actual values on both positive and negative cases as illustrated in this diagram (image credit: Joydwip Mohajoni). 
+<img src={ConfusionMatrix} width="300"/>
+:::
