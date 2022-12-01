@@ -6,7 +6,7 @@ keywords:
     - docs
     - modelstar
     - churn prediction
-image: https://raw.githubusercontent.com/modelstar-labs/modelstar-io-website/master/docs/tutorials/churn-prediction-inside-snowflake/title-image.png
+image: https://cdn.modelstar.io/tutorial_2_social.png
 ---
 
 import TitleImage from './title-image.png';
