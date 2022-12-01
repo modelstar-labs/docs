@@ -1,7 +1,7 @@
 import Dashboard from './forecast-dashboard.png';
 import SampleData from './time-series-sample-data.png';
 
-# univariant_time_series_forecast
+# univariate_time_series_forecast
 
 ## Tutorial and use case
 
@@ -12,7 +12,7 @@ import SampleData from './time-series-sample-data.png';
 ## Syntax
 
 ```sql
-univariant_time_series_forecast(<table_name>, <time_column_name>,
+univariate_time_series_forecast(<table_name>, <time_column_name>,
                                     <value_column_name>, <forecast_period>,
                                     <period_unit>)
 ```
@@ -21,7 +21,7 @@ univariant_time_series_forecast(<table_name>, <time_column_name>,
 
 `<table_name>` (string) - the data table's name.
 
-`<time_column_name>` (string) - the name of a timestamp column in the datatable.
+`<time_column_name>` (string) - the name of a timestamp column in the data table.
 
 `<value_column_name>` (string) - the name of a value column to be forecasted.
 
@@ -51,7 +51,7 @@ Check out the Input data prerequisite for this [here](#input-data-format)
 ### SQL statement
 
 ```sql
-CALL univariant_time_series_forecast('SALES_TABLE', 'SALES_DATE', 'TOTAL_SALES', 24, 'M');
+CALL univariate_time_series_forecast('SALES_TABLE', 'SALES_DATE', 'TOTAL_SALES', 24, 'M');
 ```
 
 ### Description
@@ -60,7 +60,7 @@ Based on historical `SALES_DATE` and `TOTAL_SALES` data in `SALES_TABLE`, foreca
 
 ### Result
 
-All historical and forecasted data is materilized as a new table.
+All historical and forecasted data is materialized as a new table.
 
 A forecast dashboard is auto-generated for checking modeling accuracy, discovered trends, and predictions.
 
@@ -70,7 +70,7 @@ A forecast dashboard is auto-generated for checking modeling accuracy, discovere
 
 ### Input data format
 
-Input data is a univariant time series data: a sequence of integer or float data points indexed in timestamp. The table to be used should include in the following two columns:
+Input data is a univariate time series data: a sequence of integer or float data points indexed in timestamp. The table to be used should include in the following two columns:
 
 -   A Time stamp column. Data type: `Date & Time Data Types`.
 -   A value column. Data type: `Fixed-point Number` or `Floating-point Number`.
