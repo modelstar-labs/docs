@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmodelstar_docs=self.webpackChunkmodelstar_docs||[]).push([[535],{5641:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"ChatGPT-Generated 65-page Tutorial of a Fake Programming Language","permalink":"/blog/fake-programming-language-tutorial-generated-with-chatgpt"}]}')}}]);

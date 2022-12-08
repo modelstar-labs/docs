@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmodelstar_docs=self.webpackChunkmodelstar_docs||[]).push([[713],{3457:a=>{a.exports=JSON.parse('[{"label":"AI","permalink":"/blog/tags/ai","count":1},{"label":"ChatGPT","permalink":"/blog/tags/chat-gpt","count":1}]')}}]);
