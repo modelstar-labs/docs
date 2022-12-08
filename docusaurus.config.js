@@ -145,6 +145,12 @@ const config = {
                         position: "left",
                         // activeBaseRegex: `/community/`,
                     },
+                    {
+                        to: "blog",
+                        label: "Blog",
+                        position: "left",
+                        // activeBaseRegex: `/community/`,
+                    },
                     // {
                     //     to: "/docs/api",
                     //     label: "API",
