@@ -11,7 +11,7 @@ image: https://cdn.modelstar.io/tutorial_2_social.png
 
 import TitleImage from './title-image.png';
 import DbtLogo from './dbt.png';
-import DisneyData from './disney-data.webp';
+import DisneyData from './disney-data.png';
 import ConfusionMatrix from './cm.webp';
 
 # Churn prediction inside Snowflake with 1 Line of SQL
@@ -47,7 +47,7 @@ The next step is to choose analysis method. In this tutorial, we treat churn ana
 
 Business value will not be realized until the analyst team figures out how to prevent customers from leaving and provide actionable items, such as a new pricing model or post-sale support term. In this tutorial, we show a classifier model that can rank feature importance, which can be used as a good starting point to drill down what really matters to churn.
 
-### Modelstar AutoML streamlines churn predction modeling
+### Modelstar AutoML streamlines churn prediction modeling
 
 Modelstar provides an AutoML solution to enable SQL users to automatically obtain the best model trained from 12 ML algorithms. The 2 SQL commands `train_binary_classifier` (for model training) and `predict_binary_classifier` (for inference) automate the churn analysis process. They're developed based on our favorite open source Python AutoML library: `PyCaret`. It supports a large data scientist community (~7K GitHub Stars), and is widely used in industry (~1M downloads /month). 
 
