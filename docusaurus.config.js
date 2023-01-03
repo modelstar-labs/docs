@@ -205,7 +205,7 @@ const config = {
                 //         ],
                 //     },
                 // ],
-                copyright: `Copyright © ${new Date().getFullYear()} ModelStar, Adithya Krishnan, Helin Cao.`,
+                copyright: `Copyright © ${new Date().getFullYear()} Modelstar, Adithya Krishnan, Helin Cao.`,
             },
             prism: {
                 theme: lightCodeTheme,

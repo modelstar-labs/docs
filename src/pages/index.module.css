@@ -2,56 +2,58 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+.homepageMain {
+    font-family: "IBM Plex Sans" !important;
+}
 
 .homepageHero {
-    padding: 4rem 0 1rem 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.heroCTA {
-    padding-top: 20px;
+    padding: 4rem 4rem;
+    background: rgb(145, 111, 241);
+    background: linear-gradient(
+        45deg,
+        rgba(145, 111, 241, 0.35) 15%,
+        rgba(165, 248, 233, 0.53) 85%
+    );
     display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.heroLogo {
-    height: 100px;
-    width: 100px;
-}
-
-.homepageVideoContainer {
-    width: 100%;
+.homepageSecReq {
+    padding: 2rem 1rem;
+    background: #f8f8f8;
     text-align: center;
 }
 
-.homepageVideo {
-    border-radius: 5px;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    /* width: 650px; */
-    height: calc(0.5625 * 560px);
-    background-color: lightgray;
+.homepageSecReqCol {
+    display: block;
 }
 
-@media screen and (max-width: 996px) {
-    .homepageHero {
-        padding: 2rem 0 0 0;
-    }
+.homepageSecReqColImg {
+    height: 50px;
+    display: inline-block;
 }
 
-@media screen and (max-width: 768px) {
-    .homepageVideo {
-        /* width: 400px; */
-        height: calc(0.5625 * 400px);
-    }
+.homepageSecReqColP {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    font-size: 1rem;
 }
 
-@media screen and (max-width: 425px) {
-    .homepageVideo {
-        /* width: 250px; */
-        height: calc(0.5625 * 250px);
-    }
+.homepageSecUC {
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.homepageSecInteg {
+    padding: 2rem 2rem;
+    text-align: center;
+}
+
+.homepageSecIntegLogo {
+    padding: 0.25rem 0.5rem;
+    margin: 0.25rem 0.5rem;
+    height: 50px;
 }
